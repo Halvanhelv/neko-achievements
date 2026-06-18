@@ -64,8 +64,10 @@ defmodule Neko.Mixfile do
       # _build/<env>/lib/yamler/priv/ and consequently not found both in
       # production and on CircleCI)
       {
+        # fork of morr/yamler with a Makefile that builds the NIF on OTP 23+
+        # (drops removed erl_interface lib; robust ERTS include detection)
         :yamler,
-        github: "morr/yamler",
+        github: "Halvanhelv/yamler",
         branch: "mapping_as_map"
       },
       # {:appsignal, "~> 1.0"},
